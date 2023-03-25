@@ -19,7 +19,7 @@ clear
 # Dropbear WebSocket
 #port 69 ( Dropbear) to 80 (HTTPS Websocket)
 cd
-wget -O /usr/local/bin/ws-dropbear https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/baru/https.py && chmod +x /usr/local/bin/ws-dropbear
+wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/Azigaming404/websocket/main/https.py && chmod +x /usr/local/bin/ws-dropbear
 wget -O /etc/systemd/system/ws-dropbear.service https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/baru/https.service && chmod +x /etc/systemd/system/ws-dropbear.service
 #reboot service
 systemctl daemon-reload
