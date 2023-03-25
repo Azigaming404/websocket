@@ -42,7 +42,7 @@ clear
 
 # SSL/TLS WebSocket
 #port 1194 ( Dropbear) to 2086 (HTTP Websocket)
-wget -O /usr/local/bin/edu-tls https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/ws-tls.py && chmod +x /usr/local/bin/edu-tls
+wget -O /usr/local/bin/edu-tls https://raw.githubusercontent.com/Azigaming404/websocket/main/ws-tls.py && chmod +x /usr/local/bin/edu-tls
 wget -O /etc/systemd/system/edu-tls.service https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/ws-tls.service && chmod +x /etc/systemd/system/edu-tls.service
 #reboot service
 systemctl daemon-reload
@@ -52,7 +52,7 @@ systemctl restart edu-tls
 clear
 
 cd
-wget -O /usr/local/bin/ws-tls https://raw.githubusercontent.com/hidessh99/projectku/main/websocket/ws-tls && chmod +x /usr/local/bin/ws-tls
+wget -O /usr/local/bin/ws-tls https://raw.githubusercontent.com/Azigaming404/websocket/main/ws-tls && chmod +x /usr/local/bin/ws-tls
 wget -O /etc/systemd/system/ws-tls.service https://raw.githubusercontent.com/hidessh99/projectku/main/websocket/ws-tls.service && chmod +x  /etc/systemd/system/ws-tls.service
 
 systemctl daemon-reload
