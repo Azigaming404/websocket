@@ -2,18 +2,6 @@
 #date january 2022
 # created bye hidessh.com
 #instalasi Websocket
-
-# Websocket OpenSSH
-#port 88 (OpenSSH) to 2082 (HTTP Websocket)
-cd
-wget -O /usr/local/bin/edu-proxy https://raw.githubusercontent.com/Azigaming404/websocket/main/openssh.py && chmod +x /usr/local/bin/edu-proxy
-wget -O /etc/systemd/system/edu-proxy.service https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/baru/http.service && chmod +x /etc/systemd/system/edu-proxy.service
-
-systemctl daemon-reload
-systemctl enable edu-proxy.service
-systemctl start edu-proxy.service
-systemctl restart edu-proxy.service
-
 clear
 
 # Dropbear WebSocket
