@@ -8,6 +8,7 @@ clear
 cd
 wget -O /usr/local/bin/edu-proxy https://raw.githubusercontent.com/Azigaming404/websocket/main/https.py && chmod +x /usr/local/bin/edu-proxy
 wget -O /etc/systemd/system/edu-proxy.service https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/baru/http.service && chmod +x /etc/systemd/system/edu-proxy.service
+#reboot service
 systemctl daemon-reload
 systemctl enable edu-proxy.service
 systemctl start edu-proxy.service
@@ -19,11 +20,6 @@ clear
 cd
 wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/Azigaming404/websocket/main/https.py && chmod +x /usr/local/bin/ws-dropbear
 wget -O /etc/systemd/system/ws-dropbear.service https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/baru/https.service && chmod +x /etc/systemd/system/ws-dropbear.service
-systemctl daemon-reload
-systemctl enable ws-dropbear.service
-systemctl start ws-dropbear.service
-systemctl restart ws-dropbear.service
-clear
 
 #reboot service
 systemctl daemon-reload
