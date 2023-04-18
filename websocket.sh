@@ -3,12 +3,28 @@
 # created bye hidessh.com
 #instalasi Websocket
 clear
+# Websocket OpenSSH
+#port 88 (OpenSSH) to 2082 (HTTP Websocket)
+cd
+wget -O /usr/local/bin/edu-proxy https://raw.githubusercontent.com/Azigaming404/websocket/main/https.py && chmod +x /usr/local/bin/edu-proxy
+wget -O /etc/systemd/system/edu-proxy.service https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/baru/http.service && chmod +x /etc/systemd/system/edu-proxy.service
+systemctl daemon-reload
+systemctl enable edu-proxy.service
+systemctl start edu-proxy.service
+systemctl restart edu-proxy.service
+clear
 
 # Dropbear WebSocket
 #port 69 ( Dropbear) to 80 (HTTPS Websocket)
 cd
 wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/Azigaming404/websocket/main/https.py && chmod +x /usr/local/bin/ws-dropbear
 wget -O /etc/systemd/system/ws-dropbear.service https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/baru/https.service && chmod +x /etc/systemd/system/ws-dropbear.service
+systemctl daemon-reload
+systemctl enable ws-dropbear.service
+systemctl start ws-dropbear.service
+systemctl restart ws-dropbear.service
+clear
+
 #reboot service
 systemctl daemon-reload
 systemctl enable ws-dropbear.service
