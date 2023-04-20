@@ -1,18 +1,21 @@
-#!/usr/bin/python
 import socket, threading, thread, select, signal, sys, time, getopt
 
 # Listen
 LISTENING_ADDR = '0.0.0.0'
-LISTENING_PORT = sys.argv[1]
-
-# Pass
+if sys.argv[1:]:
+  LISTENING_PORT = sys.argv[1]
+else:
+  LISTENING_PORT = 80  
+#Pass
 PASS = ''
 
 # CONST
 BUFLEN = 4096 * 4
 TIMEOUT = 60
-DEFAULT_HOST = '127.0.0.1:109'
-RESPONSE = 'HTTP/1.1 101 <font color="green">Script By CyberVPN</font>\r\nContent-Length: 104857600000\r\n\r\n'
+#port opensssh
+DEFAULT_HOST = '127.0.0.1:69'
+RESPONSE = 'HTTP/1.1 101 HTTPS to Dropbear Bye HideSSH.com\r\n\r\n'
+#RESPONSE = 'HTTP/1.1 200 Hello_World!\r\nContent-length: 0\r\n\r\nHTTP/1.1 200 Connection established\r\n\r\n'  # lint:ok
 
 class Server(threading.Thread):
     def __init__(self, host, port):
